@@ -1,0 +1,13 @@
+.root {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+  margin-block-start: 32px;
+
+  background-color: var(--color-white);
+  border-radius: 100%;
+}

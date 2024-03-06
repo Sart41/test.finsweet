@@ -1,0 +1,12 @@
+.formItem {
+  input[type='email'] {
+    flex-grow: 1;
+
+    height: 64px;
+
+    background-color: transparent;
+    border: 1px solid rgba(235, 240, 249, 0.3);
+    border-radius: 4px;
+    outline: none;
+  }
+}

@@ -1,0 +1,16 @@
+@use '/src/app/styles/mixins' as *;
+
+.root {
+  @include reset-button;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 51px;
+
+  color: var(--color-white);
+
+  background-color: transparent;
+}

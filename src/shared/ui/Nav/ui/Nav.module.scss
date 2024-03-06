@@ -1,0 +1,6 @@
+@use '/src/app/styles/functions' as *;
+.nav {
+  display: flex;
+  gap: calcValue(10, 40, 400);
+  align-items: center;
+}

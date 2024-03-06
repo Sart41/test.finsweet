@@ -1,0 +1,25 @@
+@use '/src/app/styles/functions' as *;
+
+.projects {
+  .inner {
+    padding-block-start: 48px;
+  }
+  .h2 {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+  .h3 {
+    padding-inline-start: calcValue(0, 96, 474);
+  }
+  .list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(314px, max-content));
+    gap: 24px;
+    justify-content: center;
+
+    @media (max-width: 1023.98px) {
+      // flex-wrap: wrap;
+    }
+  }
+}

@@ -1,0 +1,46 @@
+@use '/src/app/styles/functions' as *;
+
+.stats {
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  .inner {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    padding-block: 48px;
+
+    @media (max-width: 767.98px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  .body {
+    // flex-basis: 47.734375%;
+    flex-basis: 611px;
+  }
+  h3.h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+  .description {
+    margin-bottom: 32px;
+    opacity: 0.6;
+  }
+  .graph {
+    position: relative;
+    width: calcValue(290, 375, 320, 474);
+    height: calcValue(290, 375, 320, 474);
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,34 @@
+.root {
+  .news {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, max-content));
+    gap: 32px 24px;
+    justify-content: center;
+
+    padding: 0;
+
+    list-style: none;
+  }
+  header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 48px;
+    &::after {
+      content: '';
+
+      display: block;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--color-border);
+    }
+  }
+  .title {
+    flex-shrink: 0;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1;
+  }
+}

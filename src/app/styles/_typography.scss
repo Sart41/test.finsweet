@@ -1,0 +1,105 @@
+@use 'functions' as *;
+@use 'variables' as *;
+
+h1:not([class]),
+.h1,
+h2:not([class]),
+.h2,
+h3:not([class]),
+.h3,
+h4:not([class]),
+.h4,
+h5:not([class]),
+.h5,
+h6:not([class]),
+.h6 {
+  --marginBottom: 40px;
+  --tabletFontSize: 32px;
+  --mobileFontSize: 24px;
+
+  display: block;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--color-heading);
+
+  &:not([class]):not(:first-child) {
+    margin-top: 40px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: var(--marginBottom);
+  }
+
+  &:not(:first-child) {
+    margin-top: 40px;
+  }
+
+  @media ($tablet) {
+    --marginBottom: 30px;
+
+    font-size: var(--tabletFontSize) !important;
+  }
+
+  @media ($mobile) {
+    --marginBottom: 20px;
+
+    font-size: var(--mobileFontSize) !important;
+  }
+}
+
+h1:not([class]),
+.h1 {
+  --tabletFontSize: 32px;
+  --mobileFontSize: 24px;
+
+  font-size: calcValue(36, 64);
+}
+
+h2:not([class]),
+.h2 {
+  --marginBottom: 32px;
+
+  position: relative;
+
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+h3:not([class]),
+.h3 {
+  --marginBottom: 32px;
+  --tabletFontSize: 24px;
+  --mobileFontSize: 24px;
+
+  font-size: calcValue(32, 48, 474);
+  font-weight: 700;
+  line-height: 1.2;
+  text-wrap: balance;
+}
+
+h4:not([class]),
+.h4 {
+  --marginBottom: 24px;
+  --tabletFontSize: 20px;
+  --mobileFontSize: 18px;
+}
+
+h5:not([class]),
+.h5 {
+  --marginBottom: 24px;
+  --tabletFontSize: 20px;
+  --mobileFontSize: 20px;
+
+  font-size: 20px;
+}
+
+h6:not([class]),
+.h6 {
+  --marginBottom: 24px;
+  --tabletFontSize: 16px;
+  --mobileFontSize: 15px;
+
+  font-size: 18px;
+}

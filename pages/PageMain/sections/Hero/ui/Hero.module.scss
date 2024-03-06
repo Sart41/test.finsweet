@@ -1,0 +1,69 @@
+@use '/src/app/styles/functions' as *;
+
+.hero {
+  background: url('/images/hero/bg-hero.jpg') center / cover;
+  background-repeat: no-repeat;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    min-height: calcValue(450, 735);
+  }
+
+  .title {
+    max-width: 640px;
+    margin-top: calcValue(40, 128, 474, 1024);
+    margin-bottom: 48px;
+    color: var(--color-white);
+  }
+  .h1 {
+    font-size: calcValue(40, 64, 474);
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .actions {
+    display: flex;
+    gap: 24px;
+    justify-content: flex-start;
+  }
+
+  .info {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+
+    margin-top: auto;
+    margin-bottom: calcValue(24, 64, 474, 1024);
+
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-white);
+    @media (max-width: 473.98px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  .infoLeft,
+  .infoRight {
+    flex-shrink: 0;
+  }
+
+  @media (min-width: 474px) {
+    .infoCenter {
+      position: relative;
+      width: 100%;
+      &::after {
+        content: '';
+
+        position: absolute;
+        top: 50%;
+        translate: 0 -50%;
+
+        width: 100%;
+        height: 2px;
+
+        background-color: var(--color-white);
+      }
+    }
+  }
+}

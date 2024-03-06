@@ -1,0 +1,42 @@
+.footer {
+  // display: none;
+  background-color: var(--color-dark);
+
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 24px;
+    justify-content: space-between;
+  }
+  .logo {
+    flex-shrink: 0;
+  }
+  nav {
+    display: flex;
+    gap: 88px;
+    justify-content: space-between;
+    color: var(--color-white);
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      padding: 0;
+
+      list-style: none;
+      a {
+        color: rgba(255, 255, 255, 0.78);
+        text-decoration: none;
+      }
+    }
+  }
+  form {
+    flex-basis: 544px;
+    color: var(--color-white);
+    input {
+    }
+  }
+  .formItem {
+    display: flex;
+  }
+}

@@ -1,0 +1,26 @@
+:root {
+  --color-green-primary: #70c174;
+  --color-green-secondary: #bef3c0;
+  --color-green-tertiary: #eff7f2;
+
+  --color-dark: #000;
+  --color-text-primary: #1d2130;
+  --color-text-secondary: #525560;
+
+  --color-white: #fff;
+  --color-light: #ebf0f9;
+
+  --color-border: #e5e5e5;
+
+  --base-font-family: 'Roboto', sans-serif;
+  --base-font-weight: 400;
+  --base-font-size: 16px;
+  --base-line-height: 1.5;
+
+  --container-width: 1280px;
+  --container-padding-x: 16px;
+}
+
+$laptop: 1023.98px;
+$tablet: 767.98px;
+$mobile: 474.98px;

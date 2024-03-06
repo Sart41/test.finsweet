@@ -1,0 +1,9 @@
+@use '/src/app/styles/mixins' as *;
+
+.logo {
+  z-index: 6;
+
+  @include tablets {
+    max-width: 100px;
+  }
+}

@@ -1,0 +1,41 @@
+@use '/src/app/styles/functions' as *;
+.root {
+  header {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    margin-bottom: 48px;
+
+    &::after {
+      content: '';
+
+      display: block;
+
+      width: 100%;
+      height: 1px;
+
+      background-color: var(--color-border);
+    }
+  }
+  .title {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+
+    font-size: calcValue(36, 40, 474.98, 767.98);
+    font-weight: 500;
+    line-height: 1;
+  }
+
+  ul {
+    display: flex;
+    // grid-template-columns: repeat(auto-fit, minmax(628px, max-content));
+    // grid-template-columns: repeat(1fr, auto-fit);
+    gap: 24px;
+    justify-content: center;
+
+    padding: 0;
+
+    list-style: none;
+  }
+}

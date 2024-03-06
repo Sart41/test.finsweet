@@ -1,0 +1,63 @@
+@use '/src/app/styles/mixins' as *;
+
+$standartTrans: ease-in 0.2s;
+
+.burger {
+  @include reset-button;
+
+  cursor: pointer;
+
+  position: relative;
+  z-index: 50;
+
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+
+  width: 48px;
+  height: 48px;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  & span {
+    position: absolute;
+    top: 50%;
+
+    width: 50%;
+    height: 3px;
+
+    background-color: var(--color-dark);
+    border-radius: 20px;
+
+    transition: transform $standartTrans, top $standartTrans 0.2s; // отложить запуск анимации смещения на Xс, до окончания анимации трансформации
+
+    &:first-child {
+      // width: 120%;
+      top: calc(50% - 8px);
+    }
+
+    &:last-child {
+      // width: 80%;
+      top: calc(50% + 8px);
+    }
+  }
+
+  &.active span {
+    top: 50%;
+    transform: scale(0);
+    // width: 100%;
+    transition: transform $standartTrans 0.2s, top $standartTrans;
+
+    &:first-child {
+      top: 50%;
+      transform: translateY(-50%) rotate(-45deg);
+    }
+
+    &:last-child {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+}
